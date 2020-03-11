@@ -2,19 +2,21 @@
 # Object Oriented Programming (DIEF, UNIMORE)
 This is an intermediate programming course about the Object Oriented methodology and Java. We recommend this course to learners who have previous experience in software development or a background in computer science.  At the end of this course, learners will be empowered to create a real-world Java program. In achieving this goal, students will learn the fundamentals of Object Oriented Programming, how to leverage the power of existing libraries, how to build graphical user interfaces, how to use some core algorithms for searching and sorting data and how to read and write data both locally and from the network.
 
-## How to use it
-The whole material, comprising slides and code examples, can be downloaded using git:
+## Course material
 
-* $ git clone https://github.com/nbicocchi/ooprogramming.git
+Video lessons can be found on [Youtube](https://www.youtube.com/watch?v=JxspJSfVvSA&list=PLhlcRDRHVUzTruZmXalUSJAK26pouP8ST)
 
-Both slides and code examples might be updated or bug-fixed during the course. At any time, for downloading the
-latest version, go the course material directory (on your pc) and use:
+Slides and code examples can be found on [GitHub](https://github.com/nbicocchi/ooprogramming) and downloaded using git:
 
-* $ git pull (in case of errors: git reset --hard; git pull)
+> $ git clone https://github.com/nbicocchi/ooprogramming.git
+
+Both slides and code examples might be updated or bug-fixed during the course. At any time, for downloading the latest version, go the course material directory (on your pc) and use:
+
+> $ git pull (in case of errors: git reset --hard; git pull)
 
 Code examples can be directly imported and run in Eclipse with:
 
-* File -> Import -> General -> Existing Projects into Workspace
+> File -> Import -> General -> Existing Projects into Workspace
 
 ## Java Modules
 [M1] From C to Java
