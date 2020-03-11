@@ -4,9 +4,7 @@ This is an intermediate programming course about the Object Oriented methodology
 
 ## Course material
 
-Video lessons can be found on [Youtube](https://www.youtube.com/watch?v=JxspJSfVvSA&list=PLhlcRDRHVUzTruZmXalUSJAK26pouP8ST)
-
-Slides and code examples can be found on [GitHub](https://github.com/nbicocchi/ooprogramming) and downloaded using git:
+Video lessons can be found on [Youtube](https://www.youtube.com/watch?v=JxspJSfVvSA&list=PLhlcRDRHVUzTruZmXalUSJAK26pouP8ST) while slides, books, and code examples can be found on [GitHub](https://github.com/nbicocchi/ooprogramming) and downloaded using git:
 
 > $ git clone https://github.com/nbicocchi/ooprogramming.git
 
@@ -55,7 +53,7 @@ Code examples can be directly imported and run in Eclipse with:
 * Array Sub-typing
 * Object Sub-typing
 * Collection Sub-typing
-* Bounded Wildcards Types
+* Bounded Wild-cards Types
 * Code Erasure
 
 [M6] Exceptions 
