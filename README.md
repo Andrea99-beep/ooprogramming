@@ -156,7 +156,7 @@ Which kind of project can we do?
 How big the project has to be?
 > A project comprised of 1000-3000 source lines of code is enough to grasp the feeling of what developing software means.
 
-What is the best moment for starting the project
+What is the best moment for starting the project?
 > The first half of the course concerns basic topics that must be assimilated before starting. My personal suggestion is to start the project around midterm and use the second part of the course to sketch out the main design.
 
 While developing I get strange errors. What should I do?
