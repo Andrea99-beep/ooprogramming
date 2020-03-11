@@ -111,13 +111,11 @@ Code examples can be directly imported and run in Eclipse with:
 * Advanced synchronisation (wait/notify)
 
 ## Rules
-The final exam of this course is a discussion about a project to be developed at home. It is worth noticing that the project is not supposed to be developed without supervision, but mostly during the course. The whole development process and related discussions with Prof. Bicocchi will be evaluated. The general idea of the project must be defined before mid-term.
+The final exam is a discussion about both the home project and theoretical aspects concerning Java and OOP techniques. It is worth noticing that the project is not supposed to be developed alone without supervision, but mostly during the course. The whole development process and related discussions with Prof. Bicocchi will be evaluated. Students are expected:
 
-At the final discussion, it is expected:
+* to pass an oral examination about OOP techniques and the Java language (short written exercises might be used, see topics above) 
 
-* to pass an oral examination about OOP and the Java language (short written exercises might be used, see topics above) 
-
-* to successfully discuss about the structure, the internals and engineering choices of the project
+* to successfully discuss about the structure, the internals and engineering choices of their home project
 
 
 ## Books
