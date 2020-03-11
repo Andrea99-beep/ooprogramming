@@ -23,6 +23,15 @@ Code examples can be directly imported and run in Eclipse with:
 
 > File -> Import -> General -> Existing Projects into Workspace
 
+## Books
+* Programmazione a oggetti in Java; Giacomo Cabri, Franco Zambonelli (beginner)
+
+* Thinking in Java; Bruce Eckel (intermediate)
+
+* Effective Java; Joshua Bloch (advanced)
+
+* Design Patterns; Eric and Elisabeth Freeman (advanced)
+
 ## Modules
 [M1] From C to Java
 
@@ -115,28 +124,17 @@ Code examples can be directly imported and run in Eclipse with:
 * Deadlock, Livelock, Starvation
 * Advanced synchronisation (wait/notify)
 
-## Rules
+## Exam
 The final exam is a discussion about both the home project and theoretical aspects concerning Java and OOP techniques. It is worth noticing that the project is not supposed to be developed alone without supervision, but mostly during the course. The whole development process and related discussions with Prof. Bicocchi will be evaluated. Students are expected:
 
 * to pass an oral examination about OOP techniques and the Java language (short written exercises might be used, see topics above) 
 
 * to successfully discuss about the structure, the internals and engineering choices of their home project
 
-## Books
-In the following there is list of good books to be used during the development, ordered by difficulty. At the end of the course students are expected to understand and use concepts of intermediate level. Advanced level is only for students with a remarkable programming background.
-
-* Programmazione a oggetti in Java; Giacomo Cabri, Franco Zambonelli (beginner)
-
-* Thinking in Java; Bruce Eckel (intermediate)
-
-* Effective Java; Joshua Bloch (advanced)
-
-* Design Patterns; Eric and Elisabeth Freeman (advanced)
-
 ## Web
 * https://docs.oracle.com/javase/tutorial/
 
-* https://docs.oracle.com/en/java/javase/12/
+* https://docs.oracle.com/en/java/javase/13/
 
 * https://www.w3resource.com/java-tutorial/
 
