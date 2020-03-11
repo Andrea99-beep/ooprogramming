@@ -5,7 +5,7 @@ This is an intermediate programming course about the Object Oriented methodology
 ## Software
 * [Java SE Development Kit 13](https://www.oracle.com/java/technologies/javase-jdk13-downloads.html)
 * [Eclipse IDE for Java developers](https://www.eclipse.org/downloads/)
-* [Git](https://git-scm.com/downloads)
+* [Git distributed version control system ](https://git-scm.com/downloads)
 
 ## Video
 Video lessons can be found on [Youtube](https://www.youtube.com/watch?v=JxspJSfVvSA&list=PLhlcRDRHVUzTruZmXalUSJAK26pouP8ST)
