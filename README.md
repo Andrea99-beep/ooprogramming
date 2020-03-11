@@ -2,6 +2,11 @@
 # Object Oriented Programming (DIEF, UNIMORE)
 This is an intermediate programming course about the Object Oriented methodology and Java. We recommend this course to learners who have previous experience in software development or a background in computer science.  At the end of this course, learners will be empowered to create a real-world Java program. In achieving this goal, students will learn the fundamentals of Object Oriented Programming, how to leverage the power of existing libraries, how to build graphical user interfaces, how to use some core algorithms for searching and sorting data and how to read and write data both locally and from the network.
 
+## Software
+
+* [Java SE Development Kit 13](https://www.oracle.com/java/technologies/javase-jdk13-downloads.html)
+* [Eclipse IDE for Java developers](https://www.eclipse.org/downloads/)
+
 ## Material
 
 Video lessons can be found on [Youtube](https://www.youtube.com/watch?v=JxspJSfVvSA&list=PLhlcRDRHVUzTruZmXalUSJAK26pouP8ST)
@@ -116,7 +121,6 @@ The final exam is a discussion about both the home project and theoretical aspec
 * to pass an oral examination about OOP techniques and the Java language (short written exercises might be used, see topics above) 
 
 * to successfully discuss about the structure, the internals and engineering choices of their home project
-
 
 ## Books
 In the following there is list of good books to be used during the development, ordered by difficulty. At the end of the course students are expected to understand and use concepts of intermediate level. Advanced level is only for students with a remarkable programming background.
