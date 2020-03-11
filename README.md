@@ -7,6 +7,12 @@ This is an intermediate programming course about the Object Oriented methodology
 * [Eclipse IDE for Java developers](https://www.eclipse.org/downloads/)
 * [Git distributed version control system ](https://git-scm.com/downloads)
 
+## Books
+* Programmazione a oggetti in Java; Giacomo Cabri, Franco Zambonelli (beginner)
+* Thinking in Java; Bruce Eckel (intermediate)
+* Effective Java; Joshua Bloch (advanced)
+* Design Patterns; Eric and Elisabeth Freeman (advanced)
+
 ## Video
 Video lessons can be found on [Youtube](https://www.youtube.com/watch?v=JxspJSfVvSA&list=PLhlcRDRHVUzTruZmXalUSJAK26pouP8ST)
 
@@ -22,15 +28,6 @@ Both slides and code examples might be updated or bug-fixed during the course. A
 Code examples can be directly imported and run in Eclipse with:
 
 > File -> Import -> General -> Existing Projects into Workspace
-
-## Books
-* Programmazione a oggetti in Java; Giacomo Cabri, Franco Zambonelli (beginner)
-
-* Thinking in Java; Bruce Eckel (intermediate)
-
-* Effective Java; Joshua Bloch (advanced)
-
-* Design Patterns; Eric and Elisabeth Freeman (advanced)
 
 ## Modules
 [M1] From C to Java
