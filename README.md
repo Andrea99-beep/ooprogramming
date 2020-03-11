@@ -2,7 +2,7 @@
 # Object Oriented Programming (DIEF, UNIMORE)
 This is an intermediate programming course about the Object Oriented methodology and Java. We recommend this course to learners who have previous experience in software development or a background in computer science.  At the end of this course, learners will be empowered to create a real-world Java program. In achieving this goal, students will learn the fundamentals of Object Oriented Programming, how to leverage the power of existing libraries, how to build graphical user interfaces, how to use some core algorithms for searching and sorting data and how to read and write data both locally and from the network.
 
-## Course material
+## Material
 
 Video lessons can be found on [Youtube](https://www.youtube.com/watch?v=JxspJSfVvSA&list=PLhlcRDRHVUzTruZmXalUSJAK26pouP8ST)
 
@@ -18,7 +18,7 @@ Code examples can be directly imported and run in Eclipse with:
 
 > File -> Import -> General -> Existing Projects into Workspace
 
-## Java Modules
+## Modules
 [M1] From C to Java
 
 * The software crisis
@@ -110,7 +110,7 @@ Code examples can be directly imported and run in Eclipse with:
 * Deadlock, Livelock, Starvation
 * Advanced synchronisation (wait/notify)
 
-## Course Rules
+## Rules
 The final exam of this course is a discussion about a project to be developed at home. It is worth noticing that the project is not supposed to be developed without supervision, but mostly during the course. The whole development process and related discussions with Prof. Bicocchi will be evaluated. The general idea of the project must be defined before mid-term.
 
 At the final discussion, it is expected:
@@ -120,7 +120,7 @@ At the final discussion, it is expected:
 * to successfully discuss about the structure, the internals and engineering choices of the project
 
 
-## Course Books
+## Books
 In the following there is list of good books to be used during the development, ordered by difficulty. At the end of the course students are expected to understand and use concepts of intermediate level. Advanced level is only for students with a remarkable programming background.
 
 * Programmazione a oggetti in Java; Giacomo Cabri, Franco Zambonelli (beginner)
@@ -131,7 +131,7 @@ In the following there is list of good books to be used during the development, 
 
 * Design Patterns; Eric and Elisabeth Freeman (advanced)
 
-## Web Resources
+## Web
 * https://docs.oracle.com/javase/tutorial/
 
 * https://docs.oracle.com/en/java/javase/12/
