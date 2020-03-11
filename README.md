@@ -16,7 +16,7 @@ This is an intermediate programming course about the Object Oriented methodology
 ## Video
 Video lessons can be found on [Youtube](https://www.youtube.com/watch?v=JxspJSfVvSA&list=PLhlcRDRHVUzTruZmXalUSJAK26pouP8ST)
 
-## Slides, books, code examples
+## Slides, code examples
 Slides, books, and code examples can be found here and downloaded using git:
 
 > $ git clone https://github.com/nbicocchi/ooprogramming.git
