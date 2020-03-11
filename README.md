@@ -13,6 +13,15 @@ This is an intermediate programming course about the Object Oriented methodology
 * Effective Java; Joshua Bloch (advanced)
 * Design Patterns; Eric and Elisabeth Freeman (advanced)
 
+## Web
+* https://docs.oracle.com/javase/tutorial/
+* https://docs.oracle.com/en/java/javase/13/
+* https://www.w3resource.com/java-tutorial/
+* https://www.w3resource.com/java-exercises/
+* https://github.com/mtdvio/every-programmer-should-know
+* https://github.com/charlax/professional-programming
+* https://github.com/sindresorhus/awesome
+
 ## Video
 Video lessons can be found on [Youtube](https://www.youtube.com/watch?v=JxspJSfVvSA&list=PLhlcRDRHVUzTruZmXalUSJAK26pouP8ST)
 
@@ -127,21 +136,6 @@ The final exam is a discussion about both the home project and theoretical aspec
 * to pass an oral examination about OOP techniques and the Java language (short written exercises might be used, see topics above) 
 
 * to successfully discuss about the structure, the internals and engineering choices of their home project
-
-## Web
-* https://docs.oracle.com/javase/tutorial/
-
-* https://docs.oracle.com/en/java/javase/13/
-
-* https://www.w3resource.com/java-tutorial/
-
-* https://www.w3resource.com/java-exercises/
-
-* https://github.com/mtdvio/every-programmer-should-know
-
-* https://github.com/charlax/professional-programming
-
-* https://github.com/sindresorhus/awesome
 
 ## FAQ
 Can we develop the project in groups of 1 or 3 people?
