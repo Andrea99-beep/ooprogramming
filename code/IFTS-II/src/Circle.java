@@ -1,6 +1,7 @@
 
 /* 
  * This is a circle!
+ * This is a circle again!
  */
 
 public class Circle implements Comparable<Circle> {
