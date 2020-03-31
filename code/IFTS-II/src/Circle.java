@@ -1,4 +1,8 @@
 
+/* 
+ * This is a circle!
+ */
+
 public class Circle implements Comparable<Circle> {
 	Point center;
 	double r;
