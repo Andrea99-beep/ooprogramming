@@ -1,39 +1,35 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class App {
-
 	public static void main(String[] args) {
-		Building building = new Building("Viale Santità", "17/A");
-		Office o;
-		ArrayList<Person> p;
 
-		o = new Office("I", "I-A");
-		p = o.getPeople();
-		p.add(new Person("Luca", "Rossi"));
-		p.add(new Person("Lucia", "Verdi"));
-		p.add(new Person("Luca", "Neri"));
-		p.add(new Person("Marco", "Bianchi"));
-		building.getOffices().add(o);
+		ArrayList<Circle> l1 = new ArrayList<Circle>();
+		l1.add(new Circle(0, 0, 7, "white"));
+		l1.add(new Circle(5, 5, 10, "black"));
+		l1.add(new Circle(3, 3, 1, "orange"));
 
-		o = new Office("I", "I-B");
-		p = o.getPeople();
-		p.add(new Person("Lucia", "Rossi"));
-		p.add(new Person("John", "Verdi"));
-		p.add(new Person("Giovanni", "Bianchi"));
-		building.getOffices().add(o);
+		for (Circle c : l1) {
+			System.out.println(c + " " + c.getArea());
+		}
 
-		o = new Office("II", "I-K");
-		building.getOffices().add(o);
+		Collections.sort(l1);
 
-		o = new Office("II", "I-J");
-		p = o.getPeople();
-		p.add(new Person("Pietro", "Gialli"));
-		p.add(new Person("Lucia", "Neri"));
-		p.add(new Person("Luca", "White"));
-		building.getOffices().add(o);
+		Collections.sort(l1, new Comparator<Circle>() {
+			@Override
+			public int compare(Circle c0, Circle c1) {
+				// generate Double objects for comparison
+				Double d0 = new Double(c0.getArea());
+				Double d1 = new Double(c1.getArea());
+				// actual comparison
+				return d0.compareTo(d1);
+			}
+		});
 
-		System.out.println(building);
+		for (Circle c : l1) {
+			System.out.println(c + " " + c.getArea());
+		}
 
-		System.out.println(building.searchByName("Luca"));
 	}
 }

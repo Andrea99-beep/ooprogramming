@@ -5,19 +5,22 @@
  */
 
 public class Circle implements Comparable<Circle> {
+	String color;
 	Point center;
 	double r;
 
-	public Circle(Point p, double r) {
+	public Circle(Point p, double r, String color) {
 		super();
 		this.center = p;
 		this.r = r;
+		this.color = color;
 	}
 
-	public Circle(double x, double y, double r) {
+	public Circle(double x, double y, double r, String color) {
 		super();
 		this.center = new Point(x, y);
 		this.r = r;
+		this.color = color;
 	}
 
 	public Point getCenter() {
@@ -34,6 +37,14 @@ public class Circle implements Comparable<Circle> {
 
 	public void setR(double r) {
 		this.r = r;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
 	}
 
 	public double getArea() {
@@ -94,17 +105,12 @@ public class Circle implements Comparable<Circle> {
 
 	@Override
 	public String toString() {
-		return "Circle [p=" + center + ", r=" + r + "]";
+		return "Circle [color=" + color + ", center=" + center + ", r=" + r + "]";
 	}
 
 	@Override
 	public int compareTo(Circle o) {
-		if (r > o.getR()) {
-			return -1;
-		} else if (r < o.getR()) {
-			return 1;
-		}
-		return 0;
+		return getColor().compareTo(o.getColor());
 	}
 
 }
