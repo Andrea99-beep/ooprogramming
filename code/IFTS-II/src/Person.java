@@ -1,12 +1,14 @@
 
-public class Person {
+public class Person implements Comparable<Person> {
 	String name;
 	String lastName;
+	double age;
 
-	public Person(String name, String lastName) {
+	public Person(String name, String lastName, double age) {
 		super();
 		this.name = name;
 		this.lastName = lastName;
+		this.age = age;
 	}
 
 	public String getName() {
@@ -25,9 +27,22 @@ public class Person {
 		this.lastName = lastName;
 	}
 
+	public double getAge() {
+		return age;
+	}
+
+	public void setAge(double age) {
+		this.age = age;
+	}
+
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", lastName=" + lastName + "]";
+		return "Person [name=" + name + ", lastName=" + lastName + ", age=" + age + "]";
+	}
+
+	@Override
+	public int compareTo(Person o) {
+		return getName().compareTo(o.getName());
 	}
 
 }
