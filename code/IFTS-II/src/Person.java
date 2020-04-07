@@ -2,9 +2,9 @@
 public class Person implements Comparable<Person> {
 	String name;
 	String lastName;
-	double age;
+	int age;
 
-	public Person(String name, String lastName, double age) {
+	public Person(String name, String lastName, int age) {
 		super();
 		this.name = name;
 		this.lastName = lastName;
@@ -27,11 +27,11 @@ public class Person implements Comparable<Person> {
 		this.lastName = lastName;
 	}
 
-	public double getAge() {
+	public int getAge() {
 		return age;
 	}
 
-	public void setAge(double age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 
@@ -42,7 +42,15 @@ public class Person implements Comparable<Person> {
 
 	@Override
 	public int compareTo(Person o) {
-		return getName().compareTo(o.getName());
+		int ord = getName().compareTo(o.getName());
+		if (ord == 0) {
+			int ordc = getLastName().compareTo(o.getLastName());
+			if (ordc == 0) {
+				return o.getAge() - getAge();
+			}
+			return ordc;
+		}
+		return ord;
 	}
 
 }
