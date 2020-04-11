@@ -4,18 +4,19 @@ import java.util.GregorianCalendar;
 
 /**
  * A class representing a Book
+ * 
  * @author Nicola Bicocchi
  *
  */
 public class Book extends Publication {
-	int ISBN;
+	String ISBN;
 
 	/**
 	 * @param title
 	 * @param pubDate
 	 * @param ISBN
 	 */
-	public Book(String title, GregorianCalendar pubDate, int ISBN) {
+	public Book(String title, GregorianCalendar pubDate, String ISBN) {
 		super(title, pubDate);
 		this.ISBN = ISBN;
 	}

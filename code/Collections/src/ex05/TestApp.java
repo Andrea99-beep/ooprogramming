@@ -1,10 +1,11 @@
 package ex05;
 
 /**
- * The provided PhoneBook Interface defines the functionalities of a basic phone
- * book. Provide two different implementations of the given interface working
- * with the use below. (a) The first using internally Arraylist, the second (b)
- * using internally HashMap.
+ * The PhoneBook Interface defines the functionalities of a basic phone book.
+ * 
+ * Provide two different implementations of the given interface working with the
+ * use case below. The first, using internally Arraylist (a), the second using
+ * internally HashMap (b).
  * 
  * @author Nicola Bicocchi
  *

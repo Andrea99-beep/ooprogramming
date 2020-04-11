@@ -1,9 +1,10 @@
 package ex07;
 
 /**
- * Data l'interfaccia MyList (vedi codice) costruire due classi MyArrayList e
- * MyLinkedList che implementano l'interfaccia utilizzando un vettore di oggetti
- * e una lista linkata. Le due classi devono soddisfare il caso seguente.
+ * Data l'interfaccia MyList (vedi sorgenti) costruire due classi MyArrayList e
+ * MyLinkedList che implementano l'interfaccia data utilizzando internamente un
+ * vettore di oggetti (MyArrayList) e una lista linkata (MyLinkedList). Le due
+ * classi devono soddisfare il caso d'uso rappresentato nel main() seguente.
  * 
  * @author Nicola Bicocchi
  *
