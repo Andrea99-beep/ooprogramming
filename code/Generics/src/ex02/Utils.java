@@ -10,12 +10,12 @@ public class Utils {
 	}
 
 	public static <T extends Comparable<T>> void bubbleSort(List<T> l) {
-		boolean inOrder = false;
-		while (!inOrder) {
-			inOrder = true;
+		boolean ordered = false;
+		while (!ordered) {
+			ordered = true;
 			for (int i = 1; i < l.size(); i++) {
 				if(l.get(i - 1).compareTo(l.get(i)) > 0) {                
-					inOrder = false;
+					ordered = false;
 					swap(l, i, i - 1);
 				} 
 			}
