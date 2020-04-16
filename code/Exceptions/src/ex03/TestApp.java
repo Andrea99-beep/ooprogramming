@@ -1,10 +1,17 @@
 package ex03;
 
 /**
- * Create a class Test with two methods, f( ) and g( ). In g( ), throw an exception MyExcp01. 
- * In f( ), call g( ), catch its exception and, in the catch clause, 
- * throw an exception MyExcp02. 
- * Test your code in main( ).
+ * Partial delegation consist in intercepting one exception eventually generated
+ * within a try block and, in the catch block, throwing another exception.
+ * 
+ * Create a class Test comprising two methods, f() and g().
+ * 
+ * In g(), throw an exception gException.
+ * 
+ * In f(), call g(), catch gException and throw a new exception fException.
+ * 
+ * Test your code with the main method below.
+ * 
  * @author Nicola Bicocchi
  *
  */
@@ -13,7 +20,7 @@ public class TestApp {
 		Test t = new Test();
 		try {
 			t.f();
-		} catch (myExcp02 e) {
+		} catch (fException e) {
 			e.printStackTrace();
 		}
 	}

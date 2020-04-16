@@ -1,21 +1,25 @@
 package ex01;
 
 /**
- * Create a class with a main( ) that throws an object of class Exception inside a try block. 
- * Give the constructor for Exception a String argument. Catch the exception inside a catch 
- * clause and print the String argument. Add a finally clause and print a message to prove 
- * you were there.
+ * Create a class with a main() method throwing an Exception inside a try block.
+ * Provide the Exception constructor with a String argument representing a
+ * message.
+ * 
+ * Catch the exception within a catch block and print the contained message.
+ * 
+ * Add a finally block and print a message to prove that it has been executed.
+ * 
  * @author Nicola Bicocchi
  *
  */
 public class TestApp {
 	public static void main(String[] args) {
 		try {
-			throw new Exception("Problem detected!");
+			throw new Exception("Issue!");
 		} catch (Exception e) {
-			// we do nothing
+			System.out.println("[CATCH BLOCK] -> " + e.getMessage());
 		} finally {
-			System.out.println("Inside finally block...");
+			System.out.println("[FINALLY BLOCK]");
 		}
 	}
 

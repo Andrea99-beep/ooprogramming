@@ -1,23 +1,44 @@
 package ex04;
 
 /**
- * Create a three-level hierarchy of exceptions. Now create a base-class A with a method 
- * that throws an exception at the base of your hierarchy. Inherit B from A and override 
- * the method so it throws an exception at level two of your hierarchy. Repeat by inheriting 
- * class C from B. In main( ), create a C and upcast it to A, then call the method.
- * What happens if A throws the most specific exception instead of the most general?
+ * Create a three-level hierarchy of exceptions:
+ * 
+ * AException extends Exception
+ * 
+ * BException extends AException
+ * 
+ * CException extends CException
+ * 
+ * 
+ * Create a three-level hierarchy of classes:
+ * 
+ * A
+ * 
+ * B extends A
+ * 
+ * C extends B
+ * 
+ * All three classes have a method run() throwing an exception:
+ * 
+ * A.run() throws AException
+ * 
+ * B.run() throws BException
+ * 
+ * C.run() throws CException
+ * 
+ * Test your code with the main method below.
+ * 
  * @author Nicola Bicocchi
  *
  */
 public class TestApp {
 	public static void main(String[] args) {
-		A item = new A();
+		A item = new C();
 		try {
 			item.run();
-		} catch (myException01 e) {
+		} catch (AException e) {
 			e.printStackTrace();
 		}
-		
-	}
 
+	}
 }

@@ -1,16 +1,16 @@
 package ex03;
 
 public class Test {
-	public void f() throws myExcp02 {
+	public void f() throws fException {
 		try {
 			g();
-		} catch (myExcp01 e) {
-			throw new myExcp02();
+		} catch (gException e) {
+			throw new fException();
 		}
 	}
-	
-	public void g() throws myExcp01 {
-		throw new myExcp01();
+
+	public void g() throws gException {
+		throw new gException();
 	}
 
 }

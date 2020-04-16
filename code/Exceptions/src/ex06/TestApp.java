@@ -1,14 +1,16 @@
 package ex06;
 
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
+import ex05.StringChecker;
+
 /**
- * Write a class able to receive a List<String>, check all the strings using StringChecker, 
- * and remove from the list all the invalid strings. Remember Iterators, since you're going
- * to modify a list while cycling over it!
+ * Use the StringChecker class (see ex05) and Iterators for removing invalid
+ * elements from a List of Strings while iterating over it.
  * 
- * Check your code with the following main.
  * @author Nicola Bicocchi
  *
  */
@@ -16,17 +18,26 @@ public class TestApp {
 
 	public static void main(String[] args) {
 		List<String> l = new ArrayList<String>();
-		l.add("a6r6t8f0d0e");
-		l.add("66r6t8r0d6e");
-		l.add("B4r6G8f1f2e");
-		l.add("a6r6t8f0eee");
-		l.add("a7r7t7f7d7e");
-		
-		new ListChecker().check(l);
-		
+		l.add("rrr6t8f0d0e");
+		l.add("r5r6t8f0d0e");
+		l.add("r2r6t8f0d00");
+		l.add("z1z0t8f1d7d");
+
+		StringChecker sc = new StringChecker();
+		for (Iterator<String> i = l.iterator(); i.hasNext();) {
+			String s = i.next();
+			try {
+				System.out.printf("Checking %s ", s);
+				sc.check(s);
+				System.out.println("[PASS]");
+			} catch (ParseException e) {
+				i.remove();
+				System.out.println("[FAIL]");
+			}
+		}
+
 		for (String s : l) {
 			System.out.println(s);
 		}
 	}
-
 }
