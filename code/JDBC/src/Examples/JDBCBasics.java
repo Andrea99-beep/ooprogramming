@@ -16,11 +16,18 @@ public class JDBCBasics {
 
 	public JDBCBasics() throws SQLException {
 		try {
+
+			// Database manager for SQLite
 			// db = new DBManager(DBManager.JDBCDriverSQLite, DBManager.JDBCURLSQLite);
 
+			// Database manager for MySQL
 			db = new DBManager(DBManager.JDBCDriverMySQL, DBManager.JDBCURLMySQL, ResultSet.TYPE_SCROLL_SENSITIVE,
 					ResultSet.CONCUR_UPDATABLE);
 
+			/*
+			 * Simple query for testing that everything is OK. If an exception raised, the
+			 * db is deleted and created from scratch.
+			 */
 			db.executeQuery("SELECT * FROM book LIMIT 1");
 		} catch (SQLException e) {
 			db.executeUpdate("DROP TABLE IF EXISTS book");
