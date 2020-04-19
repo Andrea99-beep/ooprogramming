@@ -53,8 +53,8 @@ public class CelsiusConverterFull extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == CFButton) {
-			int tempFahr = (int)((Double.parseDouble(celsiusTF.getText())) * 1.8 + 32);
-			fahrenheitTF.setText(Integer.toString(tempFahr));
+			double tempFahr = Double.parseDouble(celsiusTF.getText()) * 1.8 + 32;
+			fahrenheitTF.setText(Double.toString(tempFahr));
 			
 			if (tempFahr < 32) {
 		    JOptionPane.showMessageDialog(this,
@@ -65,8 +65,8 @@ public class CelsiusConverterFull extends JFrame implements ActionListener {
 			
 		}
 		if (e.getSource() == FCButton) {
-			int tempCelsius = (int)(((Double.parseDouble(fahrenheitTF.getText())) - 32) * 0.555);
-			celsiusTF.setText(Integer.toString(tempCelsius));
+			double tempCelsius = (Double.parseDouble(fahrenheitTF.getText()) - 32) * 0.555;
+			celsiusTF.setText(Double.toString(tempCelsius));
 			
 			if (tempCelsius < 0) {
 			    JOptionPane.showMessageDialog(this,

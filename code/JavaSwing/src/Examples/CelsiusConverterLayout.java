@@ -35,8 +35,8 @@ public class CelsiusConverterLayout extends JFrame {
 		p2.add(FCButton);
 
 		JPanel p3 = new JPanel(new BorderLayout());
-		p3.add(p1, BorderLayout.NORTH);	
-		p3.add(p2, BorderLayout.SOUTH);
+		p3.add(p1, BorderLayout.PAGE_START);	
+		p3.add(p2, BorderLayout.PAGE_END);
 
 		/* JFrame methods called */
 		setContentPane(p3);

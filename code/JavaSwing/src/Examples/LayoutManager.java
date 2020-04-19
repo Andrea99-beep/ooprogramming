@@ -1,6 +1,11 @@
 package Examples;
-import java.awt.*;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 
 public class LayoutManager extends JFrame {
@@ -32,10 +37,10 @@ public class LayoutManager extends JFrame {
         
         JPanel p4 = new JPanel(new BorderLayout());
         p4.add(p1, BorderLayout.CENTER);
-        p4.add(p2, BorderLayout.SOUTH);
-        p4.add(p3, BorderLayout.EAST);
+        p4.add(p2, BorderLayout.PAGE_END);
+        p4.add(p3, BorderLayout.LINE_END);
  
-        add(p4);
+        setContentPane(p4);
         pack();
         setVisible(true);
 	}
