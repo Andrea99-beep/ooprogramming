@@ -1,9 +1,10 @@
 package Ereditarieta_Bank;
+
 public class TestApp {
 
 	public static void main(String[] args) {
-		Account a = new BasicAccount("Nicola", 1000);
-		Account b = new FeeAccount("Luca", 1000);
+		Account a = new DepositFeeAccount("Nicola", 1000);
+		Account b = new WithdrawFeeAccount("Luca", 1000);
 
 		System.out.println(a);
 		a.deposit(100);
