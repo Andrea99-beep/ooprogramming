@@ -1,9 +1,9 @@
 package Ereditarieta_Bank;
 
-public class ProAccount extends Account {
+public class FeeAccount extends Account {
 	public final static int FEE = 2;
 
-	public ProAccount(int amount) {
+	public FeeAccount(int amount) {
 		super(amount);
 	}
 
