@@ -1,4 +1,4 @@
-package ex06;
+package ex03;
 
 import java.util.Random;
 

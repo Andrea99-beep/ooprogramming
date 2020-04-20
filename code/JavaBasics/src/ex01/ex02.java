@@ -6,7 +6,6 @@ public class ex02 {
 			if (i % 3 == 0 && i % 5 == 0) {
 				System.out.println(i);
 			}
-			
 		}
 	}
 

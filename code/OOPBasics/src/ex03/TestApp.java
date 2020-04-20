@@ -1,34 +1,60 @@
 package ex03;
 
+import java.util.Scanner;
+
 /**
- * Use the Java wrapper types for converting a double variable into a string and
- * back. Repeat the same exercise with an int variable.
+ * Implement a simple Bingo (Tombola) application using two classes: Dealer and
+ * Player.
+ *
+ * Class Dealer
+ * 
+ * Constructors: Dealer(): create a new Dealer object
+ * 
+ * Methods: int exctractNumber(): returns the next number between [1..90]
+ * 
+ * Class Player
+ * 
+ * Constructors: Player(String name): create a new player with a given name.
+ * Each player holds 5 numbers (randomly assigned by the constructor).
+ *
+ * Methods:
+ * 
+ * void verifyNumber(int n): verify if the player holds the number n and
+ * eventually marks it as extracted
+ * 
+ * boolean bingo(): returns true if all 5 numbers have been extracted
  * 
  * @author Nicola Bicocchi
- *
  */
+
 public class TestApp {
+	public static final int MAX_PLAYERS = 4;
+
 	public static void main(String[] args) {
-		int i;
-		double d;
-		String s;
+		Dealer dealer = new Dealer();
+		Player[] players = new Player[MAX_PLAYERS];
+		boolean bingo = false;
+		int round = 0;
 
-		/* double <--> string conversion */
-		d = 3.14;
-		s = Double.toString(d);
-		// or...
-		s = String.valueOf(d);
+		System.out.printf("Insert players!\n", MAX_PLAYERS);
+		Scanner scanner = new Scanner(System.in);
+		for (int i = 0; i < MAX_PLAYERS; i++) {
+			System.out.print((i + 1) + ": ");
+			players[i] = new Player(scanner.next());
+		}
+		scanner.close();
 
-		s = "3.14";
-		d = Double.parseDouble(s);
-
-		/* int <--> string conversion */
-		i = 3;
-		s = Integer.toString(i);
-		// or...
-		s = String.valueOf(i);
-
-		s = "3";
-		d = Integer.parseInt(s);
+		while (!bingo) {
+			round++;
+			int n = dealer.extractNumber();
+			System.out.println("Dealer exctract: " + n);
+			for (int i = 0; i < MAX_PLAYERS; i++) {
+				players[i].verifyNumber(n);
+				if (players[i].bingo()) {
+					System.out.println("Wins in " + round + " extraction: " + players[i]);
+					bingo = true;
+				}
+			}
+		}
 	}
 }
