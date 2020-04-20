@@ -1,39 +1,48 @@
 package Ereditarieta_PhoneBook;
 import java.util.ArrayList;
+import java.util.List;
 
 public class PhoneBookArrayList implements PhoneBook {
-	ArrayList<Worker> l;
+	ArrayList<Person> l;
 
 	public PhoneBookArrayList() {
-		l = new ArrayList<Worker>();
-	}
-	
-	public void addPerson(Worker p) {
-		l.add(p);
-	}
-	
-	public void removePerson(Worker p) {
-		l.remove(p);
-	}
-	
-	public Worker searchByName(String name) {
-		for (Worker p : l) {
-			if (p.getName().equals(name))
-				return p;
-		}
-		return null;
-	}
-	
-	public boolean modifyPerson(Worker p1, Worker p2) {
-		int index = l.indexOf(p1);
-		if (index == -1) 
-			return false;
-		l.set(index, p2);
-		return true;
+		super();
+		this.l = new ArrayList<Person>();
 	}
 
 	@Override
-	public String toString() {
-		return l.toString();
+	public List<Person> getPeople() {
+		return l;
+	}
+
+	@Override
+	public void addPerson(Person p) {
+		l.add(p);
+	}
+
+	@Override
+	public void removePerson(Person p) {
+		l.remove(p);
+	}
+
+	@Override
+	public Person searchByName(String name) {
+		for (Person p : l) {
+			if (p.getName().equals(name)) {
+				return p;
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public boolean modifyPerson(Person p1, Person p2) {
+		for (int i = 0; i < l.size(); i++) {
+			if (l.get(i).equals(p1)) {
+				l.set(i, p2);
+				return true;
+			}
+		}
+		return false;
 	}
 }
