@@ -1,8 +1,8 @@
 package Ereditarieta_Bank;
 
-public class FeeAccount extends Account {
+public class BasicAccount extends Account {
 
-	public FeeAccount(String name, double amount) {
+	public BasicAccount(String name, double amount) {
 		super(name, amount);
 	}
 
@@ -14,7 +14,6 @@ public class FeeAccount extends Account {
 
 	@Override
 	public double withdraw(double n) {
-		amount -= amount * FEE;
 		amount -= n;
 		return amount;
 	}

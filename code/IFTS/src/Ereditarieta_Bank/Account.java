@@ -1,19 +1,31 @@
 package Ereditarieta_Bank;
 
-public class Account {
-	protected int amount;
+public abstract class Account implements AccountInt {
+	public static final double FEE = 0.01;
+	String name;
+	double amount;
 
-	public Account(int amount) {
+	public Account(String name, double amount) {
+		super();
+		this.name = name;
 		this.amount = amount;
 	}
-	
-	public int deposit(int n) {
-		amount += n;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getAmount() {
 		return amount;
 	}
-	
-	public int withdraw(int n) {
-		amount -= n;
-		return amount;
+
+	@Override
+	public String toString() {
+		return "Account [amount=" + amount + "]";
 	}
+
 }
