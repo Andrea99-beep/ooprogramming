@@ -1,6 +1,7 @@
 package Ereditarieta_PhoneBook;
+
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
 public class PhoneBookArrayList implements PhoneBook {
 	ArrayList<Person> l;
@@ -11,7 +12,7 @@ public class PhoneBookArrayList implements PhoneBook {
 	}
 
 	@Override
-	public List<Person> getPeople() {
+	public Collection<Person> getPeople() {
 		return l;
 	}
 

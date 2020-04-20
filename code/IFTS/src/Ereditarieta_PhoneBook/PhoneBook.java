@@ -1,8 +1,9 @@
 package Ereditarieta_PhoneBook;
-import java.util.List;
+
+import java.util.Collection;
 
 public interface PhoneBook {
-	public List<Person> getPeople();
+	public Collection<Person> getPeople();
 
 	public void addPerson(Person p);
 
