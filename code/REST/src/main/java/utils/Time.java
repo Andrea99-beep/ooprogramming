@@ -7,7 +7,6 @@ public class Time {
 	int second;
 
 	public Time() {
-
 	}
 
 	public Time(String host, int hour, int minute, int second) {

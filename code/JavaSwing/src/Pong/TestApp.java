@@ -8,11 +8,12 @@ import javax.swing.WindowConstants;
 public class TestApp {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
+			@Override
 			public void run() {
 				JFrame f = new JFrame("Pong");
 				
 				PongPanel pp = new PongPanel();
-				f.add(pp);
+				f.setContentPane(pp);
 				
 				f.setSize(600, 400);
 				f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

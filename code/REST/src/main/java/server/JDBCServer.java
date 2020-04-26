@@ -16,8 +16,8 @@ import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import db.DBManager;
-import utils.Mortadella;
+import database.DBManager;
+import domain.Mortadella;
 
 public class JDBCServer {
 	static Logger logger = LoggerFactory.getLogger(JDBCServer.class);
@@ -29,7 +29,7 @@ public class JDBCServer {
 			db = new DBManager(DBManager.JDBCDriverSQLite, DBManager.JDBCURLSQLite);
 			db.executeQuery("SELECT * FROM mortadella LIMIT 1");
 		} catch (ClassNotFoundException e) {
-			System.out.println("Missign lib...");
+			System.out.println("JDBC Driver not found");
 			throw new RuntimeException();
 		} catch (SQLException e) {
 			try {
@@ -61,6 +61,8 @@ public class JDBCServer {
 		get("/", (request, response) -> "Welcome!");
 
 		// POST - Add new
+		// For testing: curl -X POST -d length=36.6 -d diameter=29.5 -d weight=4.5 -d
+		// quality=Low http://localhost:8080/mortadella/add
 		post("/mortadella/add", (request, response) -> {
 			double length = Double.parseDouble(request.queryParams("length"));
 			double diameter = Double.parseDouble(request.queryParams("diameter"));
@@ -79,6 +81,9 @@ public class JDBCServer {
 		});
 
 		// PUT - Update
+		// For testing: curl -X PUT -d length=36.6 -d diameter=29.5 -d weight=4.5 -d
+		// quality=High
+		// http://localhost:8080/mortadella/214bb0db-aa52-48be-b052-cd30f730ae79
 		put("/mortadella/:id", (request, response) -> {
 			UUID uuid = UUID.fromString(request.params(":id"));
 			double length = Double.parseDouble(request.queryParams("length"));
@@ -100,10 +105,11 @@ public class JDBCServer {
 					diameter, weight, quality, uuid);
 			db.executeUpdate(query);
 			return om.writeValueAsString(m);
-
 		});
 
 		// DELETE - delete
+		// For testing: curl -X DELETE
+		// http://localhost:8080/mortadella/214bb0db-aa52-48be-b052-cd30f730ae79
 		delete("/mortadella/:id", (request, response) -> {
 			String id = request.params(":id");
 			String query;
@@ -120,24 +126,8 @@ public class JDBCServer {
 			return om.writeValueAsString("{status: ok}");
 		});
 
-		// GET - get one
-		get("/mortadella/:id", (request, response) -> {
-			String id = request.params(":id");
-			String query;
-
-			query = String.format("SELECT * FROM mortadella WHERE ID = '%s'", id);
-			ResultSet rs = db.executeQuery(query);
-			if (rs.next() == false) {
-				response.status(404);
-				return om.writeValueAsString("{status: failed}");
-			}
-
-			Mortadella m = new Mortadella(java.util.UUID.fromString(rs.getString("id")), rs.getDouble("length"),
-					rs.getDouble("diameter"), rs.getDouble("weight"), rs.getString("quality"));
-			return om.writeValueAsString(m);
-		});
-
 		// GET - get all
+		// For testing: curl -X GET http://localhost:8080/mortadella
 		get("/mortadella", (request, response) -> {
 			String query;
 
@@ -154,9 +144,12 @@ public class JDBCServer {
 		});
 
 		// GET - get by length
+		// For testing: curl -X GET
+		// "http://localhost:8080/mortadella/bylength?min=28&max=32"
 		get("/mortadella/bylength", (request, response) -> {
 			String min = request.queryParams("min");
 			String max = request.queryParams("max");
+
 			String query = String.format("SELECT * FROM mortadella WHERE length BETWEEN %s AND %s ORDER BY length", min,
 					max);
 			ResultSet rs = db.executeQuery(query);
@@ -165,12 +158,13 @@ public class JDBCServer {
 			while (rs.next()) {
 				l.add(new Mortadella(java.util.UUID.fromString(rs.getString("id")), rs.getDouble("length"),
 						rs.getDouble("diameter"), rs.getDouble("weight"), rs.getString("quality")));
-
 			}
 			return om.writeValueAsString(l);
 		});
 
 		// GET - get by quality
+		// For testing: curl -X GET
+		// "http://localhost:8080/mortadella/byquality?quality=High"
 		get("/mortadella/byquality", (request, response) -> {
 			String quality = request.queryParams("quality");
 			String query = String.format("SELECT * FROM mortadella WHERE quality=\'%s\'", quality);
@@ -183,6 +177,25 @@ public class JDBCServer {
 
 			}
 			return om.writeValueAsString(l);
+		});
+
+		// GET - get by id
+		// For testing: curl -X GET
+		// http://localhost:8080/mortadella/214bb0db-aa52-48be-b052-cd30f730ae79
+		get("/mortadella/:id", (request, response) -> {
+			String id = request.params(":id");
+			String query;
+
+			query = String.format("SELECT * FROM mortadella WHERE ID = '%s'", id);
+			ResultSet rs = db.executeQuery(query);
+			if (rs.next() == false) {
+				response.status(404);
+				return om.writeValueAsString("{status: failed}");
+			}
+
+			Mortadella m = new Mortadella(java.util.UUID.fromString(rs.getString("id")), rs.getDouble("length"),
+					rs.getDouble("diameter"), rs.getDouble("weight"), rs.getString("quality"));
+			return om.writeValueAsString(m);
 		});
 	}
 

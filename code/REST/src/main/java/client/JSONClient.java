@@ -28,15 +28,15 @@ public class JSONClient implements Runnable {
 		json = Unirest.get(url).asString().getBody();
 
 		// JSON to object mapping
-		Date d;
+		Date d = null;
 		try {
 			d = om.readValue(json, Date.class);
 		} catch (JsonParseException e) {
-			throw new RuntimeException();
+			e.printStackTrace();
 		} catch (JsonMappingException e) {
-			throw new RuntimeException();
+			e.printStackTrace();
 		} catch (IOException e) {
-			throw new RuntimeException();
+			e.printStackTrace();
 		}
 
 		// logging

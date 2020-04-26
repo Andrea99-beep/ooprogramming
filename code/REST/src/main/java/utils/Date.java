@@ -7,7 +7,6 @@ public class Date {
 	int day;
 
 	public Date() {
-
 	}
 
 	public Date(String host, int year, int month, int day) {
