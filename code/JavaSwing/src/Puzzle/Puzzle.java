@@ -31,7 +31,7 @@ public class Puzzle extends JFrame implements ActionListener {
 	private final int YTILES = 10;
 	private final int TILE_WIDTH = 100;
 	private final int TILE_HEIGHT = 50;
-	private final String filename = "cow.jpg";
+	private final String filename = "extra/cow.jpg";
 
 	private JPanel panel;
 	private ArrayList<ImageButton> buttons;

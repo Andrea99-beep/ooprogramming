@@ -56,7 +56,7 @@ public class GamePanel extends JPanel implements Runnable {
 		try {
 			AudioInputStream inputStream = AudioSystem.getAudioInputStream(
 					new BufferedInputStream(
-							new FileInputStream("clunk.wav")
+							new FileInputStream("extra/clunk.wav")
 							));
 			sounds = AudioSystem.getClip();
 			sounds.open(inputStream);
