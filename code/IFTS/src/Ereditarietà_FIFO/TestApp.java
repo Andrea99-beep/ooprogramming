@@ -30,11 +30,10 @@ public class TestApp {
 	public static void main(String[] x) {
 		MyQueue q1 = new FIFOP();
 
-		q1.add(new Task("T1", 5));
-		q1.add(new Task("T2", 3));
-		q1.add(new Task("T3", 6));
+		q1.add(new Person("Nicola", "Bianchi", "334234"));
+		q1.add(new Person("Marco", "Zucchi", "135434"));
+		q1.add(new Person("Pino", "Lelli", "765634"));
 
-		System.out.println(q1.peek());
 		System.out.println(q1.poll());
 		System.out.println(q1.poll());
 		System.out.println(q1.poll());

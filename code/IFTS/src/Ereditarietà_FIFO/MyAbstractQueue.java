@@ -4,13 +4,13 @@ import java.util.LinkedList;
 import java.util.List;
 
 public abstract class MyAbstractQueue implements MyQueue {
-	List<Task> tasks;
+	List<Person> tasks;
 	
 	public MyAbstractQueue() {
-		tasks = new LinkedList<Task>();
+		tasks = new LinkedList<Person>();
 	}
 
-	public void add(Task t) {
+	public void add(Person t) {
 		tasks.add(t);
 	}
 }

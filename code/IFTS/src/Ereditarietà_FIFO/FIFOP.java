@@ -5,18 +5,18 @@ import java.util.Collections;
 public class FIFOP extends MyAbstractQueue implements MyQueue {
 	
 	@Override
-	public void add(Task t) {
+	public void add(Person t) {
 		tasks.add(t);
 		Collections.sort(tasks);
 	}
 
 	@Override
-	public Task peek() {
+	public Person peek() {
 		return tasks.get(tasks.size()-1);
 	}
 
 	@Override
-	public Task poll() {
+	public Person poll() {
 		return tasks.remove(tasks.size()-1);
 	}
 
