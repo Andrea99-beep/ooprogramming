@@ -9,7 +9,7 @@ import java.io.IOException;
 
 /**
  * A class for copying binary files using InputStream and OutputStream
- * interfaces Different ways of copying are provided
+ * interfaces. Different ways of copying are provided
  * 
  * @author Nicola Bicocchi
  *
@@ -167,14 +167,13 @@ public class InputOutputStream {
 	}
 
 	public static void main(String[] args) throws IOException {
-		InputOutputStream cbf = new InputOutputStream("IMG.jpg", "IMG.jpg.bak");
+		InputOutputStream cbf = new InputOutputStream("extra/IMG.jpg", "extra/IMG.jpg.bak");
 
 		// cbf.copyNoBuffer();
 		// cbf.copySystemBuffer();
 		cbf.copySinglePass();
 
-		/*
-		 * for (int i = 0; i < 20; i++) cbf.copyUserBuffer((int) Math.pow(2, i));
-		 */
+		// for (int i = 0; i < 20; i++) cbf.copyUserBuffer((int) Math.pow(2, i));
+
 	}
 }

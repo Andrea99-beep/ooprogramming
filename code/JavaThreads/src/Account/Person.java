@@ -37,11 +37,6 @@ public class Person implements Runnable {
 					break;
 				}
 
-				// sleeps a bit!
-				try {
-					Thread.sleep(3000);
-				} catch (InterruptedException e) {
-				}
 			}
 		}
 	}

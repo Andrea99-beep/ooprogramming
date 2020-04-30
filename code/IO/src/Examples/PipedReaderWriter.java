@@ -5,7 +5,7 @@ import java.io.PipedReader;
 import java.io.PipedWriter;
 
 /**
- * @author imssbora
+ * @author Nicola Bicocchi
  */
 public class PipedReaderWriter {
 	public static void main(String[] args) throws Exception {

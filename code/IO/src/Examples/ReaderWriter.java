@@ -108,10 +108,10 @@ public class ReaderWriter {
 	}
 
 	public static void main(String[] args) throws IOException {
-		ReaderWriter ccf = new ReaderWriter("webpage.html", "webpage.html.bak");
+		ReaderWriter ccf = new ReaderWriter("extra/webpage.html", "extra/webpage.html.bak");
 
-		ccf.copyNoBuffer();
-		ccf.copyLineBuffer();
+		// ccf.copyNoBuffer();
+		// ccf.copyLineBuffer();
 		ccf.copyWithPrintBuffer();
 	}
 

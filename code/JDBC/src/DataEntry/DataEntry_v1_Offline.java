@@ -158,7 +158,6 @@ public class DataEntry_v1_Offline extends JFrame implements ActionListener {
 			} catch (SQLException e1) {
 				e1.printStackTrace();
 			}
-
 		}
 
 		if (e.getSource() == btnNext) {

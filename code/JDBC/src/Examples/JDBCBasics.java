@@ -15,16 +15,14 @@ public class JDBCBasics {
 	protected DBManager db;
 
 	public JDBCBasics() throws SQLException {
-		try {
 
+		try {
 			// Database manager for SQLite
 			// db = new DBManager(DBManager.JDBCDriverSQLite, DBManager.JDBCURLSQLite);
-			db = new DBManager(DBManager.JDBCDriverMySQL, DBManager.JDBCURLMySQL);
 
 			// Database manager for MySQL
-			// db = new DBManager(DBManager.JDBCDriverMySQL, DBManager.JDBCURLMySQL,
-			// ResultSet.TYPE_SCROLL_SENSITIVE,
-			// ResultSet.CONCUR_UPDATABLE);
+			db = new DBManager(DBManager.JDBCDriverMySQL, DBManager.JDBCURLMySQL, ResultSet.TYPE_SCROLL_SENSITIVE,
+					ResultSet.CONCUR_UPDATABLE);
 
 			/*
 			 * Simple query for testing that everything is OK. If an exception raised, the
