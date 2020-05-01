@@ -1,11 +1,13 @@
 package Examples;
-class RunnableModule implements Runnable {
+
+class MyRunnable implements Runnable {
 	public boolean running = true;
 
+	@Override
 	public void run() {
 		System.out.println(Thread.currentThread().getName() + " started");
 		while (running) {
-			System.out.println(Thread.currentThread().getName());	
+			System.out.println(Thread.currentThread().getName());
 			try {
 				Thread.sleep(10);
 			} catch (InterruptedException e) {
@@ -16,11 +18,10 @@ class RunnableModule implements Runnable {
 	}
 }
 
-
 public class StartStopRunnable {
 	public static void main(String[] args) {
-		RunnableModule r01 = new RunnableModule();
-		RunnableModule r02 = new RunnableModule();
+		MyRunnable r01 = new MyRunnable();
+		MyRunnable r02 = new MyRunnable();
 
 		Thread a = new Thread(r01, "Homer");
 		Thread b = new Thread(r02, "Marge");
@@ -39,19 +40,11 @@ public class StartStopRunnable {
 
 		// Graceful shutdown!
 		r01.running = false;
-		// Ungraceful shutdown!
-		//a.interrupt(); 
-
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-
-		// Graceful shutdown!
 		r02.running = false;
+
 		// Ungraceful shutdown!
-		//a.interrupt(); 
+		// a.interrupt();
+		// b.interrupt();
 
 	}
 }

@@ -7,7 +7,7 @@ public class CheckPreemption implements Runnable {
 			System.out.println(Thread.currentThread().getName());
 
 			/* yield() release CPU control */
-			// Thread.yield();
+			Thread.yield();
 		}
 	}
 

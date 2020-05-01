@@ -12,6 +12,11 @@ public class Person implements Runnable {
 	}
 
 	@Override
+	/*
+	 * Remove synchronized (account) to observe eventual race conditions. They might
+	 * show up immediately or after several runs. Because of these unpredictable
+	 * behaviors, multi-threaded programs are often difficult to debug!
+	 */
 	public void run() {
 		while (true) {
 			synchronized (account) {

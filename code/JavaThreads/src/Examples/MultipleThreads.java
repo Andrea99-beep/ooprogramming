@@ -21,7 +21,6 @@ public class MultipleThreads {
 		Thread t3 = new Thread(new Counter(500), "C3");
 		t1.start();
 		t2.start();
-		t3.setPriority(Thread.MAX_PRIORITY);
 		t3.start();
 	}
 }
