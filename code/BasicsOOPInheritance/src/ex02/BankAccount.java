@@ -1,7 +1,8 @@
 package ex02;
 
 /**
- * Class representing a bank account
+ * A class representing a bank account
+ * 
  * @author Nicola
  *
  */
@@ -11,7 +12,6 @@ public abstract class BankAccount {
 	 */
 	double balance;
 
-	
 	/**
 	 * Creates an empty bank account
 	 */
@@ -21,6 +21,7 @@ public abstract class BankAccount {
 
 	/**
 	 * Creates a bank account with an initial balance
+	 * 
 	 * @param initialBalance The initial balance
 	 */
 	public BankAccount(double initialBalance) {
@@ -29,22 +30,29 @@ public abstract class BankAccount {
 
 	/**
 	 * Increase balance by amount
+	 * 
 	 * @param amount
 	 */
 	public void deposit(double amount) {
-		balance = balance + amount;
+		if (amount > 0) {
+			balance = balance + amount;
+		}
 	}
 
 	/**
 	 * Decrease balance by amount
+	 * 
 	 * @param amount
 	 */
 	public void withdraw(double amount) {
-		balance = balance - amount;
+		if (amount > 0) {
+			balance = balance - amount;
+		}
 	}
 
 	/**
 	 * Return current balance of the account
+	 * 
 	 * @return Current balance
 	 */
 	public double getBalance() {
@@ -52,7 +60,9 @@ public abstract class BankAccount {
 	}
 
 	/**
-	 * Withdraw amount from local account and deposit the same amount to other account
+	 * Withdraw amount from local account and deposit the same amount to other
+	 * account
+	 * 
 	 * @param amount
 	 * @param other
 	 */
@@ -60,4 +70,4 @@ public abstract class BankAccount {
 		withdraw(amount);
 		other.deposit(amount);
 	}
-} 
+}

@@ -1,81 +1,121 @@
 package ex01;
 
 /**
- * @author nicola
+ * A class representing a brand new motorbike
+ * 
+ * @author Nicola Bicocchi
  *
  */
 public class Motorbike {
 	/**
-	 * The color of the motor bike
+	 * The brand of the motorbike
 	 */
-	String color;
+	String brand;
 
 	/**
-	 * The model of the motor bike
+	 * The model of the motorbike
 	 */
 	String model;
 
 	/**
-	 * The current speed of the motor bike
+	 * The maximum speed of the motorbike, default is 180
 	 */
-	double speed;
+	double maxspeed = 180;
 
 	/**
-	 * The status of the anti theft system installed on the motor bike (disabled by
-	 * default)
+	 * True if an anti-theft system is installed on the motorbike, default is false
 	 */
 	boolean antitheft = false;
 
 	/**
-	 * @param color
-	 * @param model
-	 * @param speed
+	 * 
+	 * Constructs a Motorbike with the specified attributes
+	 * 
+	 * @param brand     The brand of the motor bike
+	 * @param model     The model of the motor bike
+	 * @param maxspeed  The maximum speed of the motor bike
+	 * @param antitheft True if anti-theft is installed
 	 */
-	public Motorbike(String color, String model, double speed) {
-		this.color = color;
+	public Motorbike(String brand, String model, double maxspeed, boolean antitheft) {
+		super();
+		this.brand = brand;
 		this.model = model;
-		this.speed = speed;
+		this.maxspeed = maxspeed;
+		this.antitheft = antitheft;
 	}
 
-	public String getColor() {
-		return color;
+	/**
+	 * 
+	 * Constructs a Motorbike with the specified attributes
+	 * 
+	 * @param brand The brand of the motor bike
+	 * @param model The model of the motor bike
+	 */
+	public Motorbike(String brand, String model) {
+		super();
+		this.brand = brand;
+		this.model = model;
 	}
 
-	public void setColor(String color) {
-		this.color = color;
+	/**
+	 * @return the brand
+	 */
+	public String getBrand() {
+		return brand;
 	}
 
+	/**
+	 * @param brand the brand to set
+	 */
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
+	/**
+	 * @return the model
+	 */
 	public String getModel() {
 		return model;
 	}
 
+	/**
+	 * @param model the model to set
+	 */
 	public void setModel(String model) {
 		this.model = model;
 	}
 
-	public double getSpeed() {
-		return speed;
+	/**
+	 * @return the maxspeed
+	 */
+	public double getMaxspeed() {
+		return maxspeed;
 	}
 
 	/**
-	 * @param speed Set the current speed of the motor bike. It works only if
-	 *              antitheft is disabled.
+	 * @param maxspeed the maxspeed to set
 	 */
-	public void setSpeed(double speed) {
-		if (antitheft == false)
-			this.speed = speed;
+	public void setMaxspeed(double maxspeed) {
+		this.maxspeed = maxspeed;
 	}
 
+	/**
+	 * @return the antitheft
+	 */
 	public boolean isAntitheft() {
 		return antitheft;
 	}
 
+	/**
+	 * @param antitheft the antitheft to set
+	 */
 	public void setAntitheft(boolean antitheft) {
 		this.antitheft = antitheft;
 	}
 
 	@Override
 	public String toString() {
-		return "Motorbike [color=" + color + ", model=" + model + ", speed=" + speed + ", antitheft=" + antitheft + "]";
+		return "Motorbike [brand=" + brand + ", model=" + model + ", maxspeed=" + maxspeed + ", antitheft=" + antitheft
+				+ "]";
 	}
 }

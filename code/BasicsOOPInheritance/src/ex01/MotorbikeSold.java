@@ -1,64 +1,82 @@
 package ex01;
 
 /**
- * Class representing a motor bike that have been sold (with a licence plate and limited in speed)
+ * A class representing a sold motor bike (circulating on the street)
+ * 
  * @author Nicola Bicocchi
  *
  */
 public class MotorbikeSold extends Motorbike {
 	/**
-	 * The license plate assigned to the motor bike after being sold
+	 * The current speed of the motor bike, default is 0, it cannot exceed maxspeed
+	 */
+	double speed = 0;
+
+	/**
+	 * Licence plate of the motorbike
 	 */
 	String licencePlate;
-	
+
 	/**
-	 * The maximum speed the motor bike is allowed to actually run
+	 * 
+	 * Constructs a MotorbikeSold with the specified attributes
+	 * 
+	 * @param brand        The brand of the motorbike
+	 * @param model        The model of the motorbike
+	 * @param maxspeed     The maximum speed of the motorbike
+	 * @param antitheft    True if anti-theft is installed
+	 * @param licencePlate The licenceplate of motorbike
 	 */
-	double maxSpeed;
-	
-	/**
-	 * @param color
-	 * @param model
-	 * @param speed
-	 * @param licencePlate
-	 * @param maxSpeed
-	 */
-	public MotorbikeSold(String color, String model, double speed, String licencePlate, double maxSpeed) {
-		super(color, model, speed);
+	public MotorbikeSold(String brand, String model, double maxspeed, boolean antitheft, String licencePlate) {
+		super(brand, model, maxspeed, antitheft);
 		this.licencePlate = licencePlate;
-		this.maxSpeed = maxSpeed;
 	}
-	
+
+	/**
+	 * 
+	 * Constructs a MotorbikeSold with the specified attributes
+	 * 
+	 * @param brand        The brand of the motorbike
+	 * @param model        The model of the motorbike
+	 * @param licencePlate The licenceplate of motorbike
+	 */
+	public MotorbikeSold(String brand, String model, String licencePlate) {
+		super(brand, model);
+		this.licencePlate = licencePlate;
+	}
+
+	/**
+	 * @return the speed
+	 */
+	public double getSpeed() {
+		return speed;
+	}
+
+	/**
+	 * @param speed the speed to set (not allowed to exceed maxspeed)
+	 */
+	public void setSpeed(double speed) {
+		this.speed = Math.min(maxspeed, speed);
+	}
+
+	/**
+	 * @return the licencePlate
+	 */
 	public String getLicencePlate() {
 		return licencePlate;
 	}
-	
+
+	/**
+	 * @param licencePlate the licencePlate to set
+	 */
 	public void setLicencePlate(String licencePlate) {
 		this.licencePlate = licencePlate;
 	}
 
-	public double getMaxSpeed() {
-		return maxSpeed;
-	}
-
-	public void setMaxSpeed(double maxSpeed) {
-		this.maxSpeed = maxSpeed;
-	}
-	
-	/**
-	  * {@inheritDoc}
-	  * Works like in the super class but limits the speed to maxSpeed
-	  */
-	@Override
-	public void setSpeed(double speed) {
-		if (antitheft == false) {
-			this.speed = Math.min(speed, maxSpeed);
-		}
-	}
-
 	@Override
 	public String toString() {
-		return "MotorbikeSold [licencePlate=" + licencePlate + ", maxSpeed=" + maxSpeed + ", color=" + color
-				+ ", model=" + model + ", speed=" + speed + ", antitheft=" + antitheft + "]";
+		return "MotorbikeSold [speed=" + speed + ", licencePlate=" + licencePlate + ", brand=" + brand + ", model="
+				+ model + ", maxspeed=" + maxspeed + ", antitheft=" + antitheft + "]";
 	}
+
 }

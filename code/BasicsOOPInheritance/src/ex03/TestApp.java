@@ -1,5 +1,12 @@
 package ex03;
 
+/**
+ * Implementare le classi rappresentate nel diagramma UML extra/ex03.jpg e
+ * verificarne il buon funzionamento attraverso il metodo main() sottostante.
+ * 
+ * @author Nicola Bicocchi
+ *
+ */
 public class TestApp {
 
 	public static void main(String[] args) {
@@ -10,14 +17,14 @@ public class TestApp {
 		v[3] = new Square(3);
 
 		for (Shape s : v) {
-			System.out.println(s.getArea());
-		}
+			System.out.println(s);
 
-		if (v[3] instanceof Rectangle) {
-			Rectangle r = (Rectangle)v[3];
-			System.out.println(r.getWidth());
-		}
+			if (s instanceof Rectangle) {
+				Rectangle r = (Rectangle) s;
+				System.out.println(r.getWidth());
+				System.out.println(r.getHeigth());
 
+			}
+		}
 	}
-
 }

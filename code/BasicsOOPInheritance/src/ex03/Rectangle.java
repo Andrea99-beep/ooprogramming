@@ -3,25 +3,25 @@ package ex03;
 public class Rectangle extends Shape {
 	protected double width;
 	protected double heigth;
-	
+
 	public Rectangle() {
 		super();
 		this.width = 10;
 		this.heigth = 10;
-	}	
-	
+	}
+
 	public Rectangle(double width, double heigth) {
 		super();
 		this.width = width;
 		this.heigth = heigth;
 	}
-	
+
 	public Rectangle(String color, boolean filled, double width, double heigth) {
 		super(color, filled);
 		this.width = width;
 		this.heigth = heigth;
 	}
-	
+
 	public double getWidth() {
 		return width;
 	}
@@ -50,6 +50,8 @@ public class Rectangle extends Shape {
 
 	@Override
 	public String toString() {
-		return "Rectangle [width=" + width + ", heigth=" + heigth + ", color=" + color + ", filled=" + filled + "]";
+		return "Rectangle [width=" + width + ", heigth=" + heigth + ", color=" + color + ", filled=" + filled
+				+ ", getWidth()=" + getWidth() + ", getHeigth()=" + getHeigth() + ", getArea()=" + getArea()
+				+ ", getPerimeter()=" + getPerimeter() + "]";
 	}
 }
