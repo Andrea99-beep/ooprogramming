@@ -1,46 +1,25 @@
-.metadata
 bin/
 tmp/
+.externalToolBuilders/
+.recommenders/
+
 *.tmp
 *.bak
+*.sqlite
 *.swp
 *~.nib
+*.launch
+*.pydevproject
+
 local.properties
 .loadpath
 .recommenders
-
-# External tool builders
-.externalToolBuilders/
-
-# Locally stored "Eclipse launch configurations"
-*.launch
-
-# PyDev specific (Python IDE for Eclipse)
-*.pydevproject
-
-# CDT-specific (C/C++ Development Tooling)
+.metadata
 .cproject
-
-# Java annotation processor (APT)
 .factorypath
-
-# PDT-specific (PHP Development Tools)
 .buildpath
-
-# sbteclipse plugin
 .target
-
-# Tern plugin
 .tern-project
-
-# TeXlipse plugin
 .texlipse
-
-# STS (Spring Tool Suite)
 .springBeans
-
-# Code Recommenders
-.recommenders/
-
-# OSX
 .DS_Store
