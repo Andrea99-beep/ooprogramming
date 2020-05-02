@@ -9,7 +9,7 @@ import java.sql.Statement;
 
 public class DBManager {
 	public static final String JDBCDriverSQLite = "org.sqlite.JDBC";
-	public static final String JDBCURLSQLite = "jdbc:sqlite:test.db";
+	public static final String JDBCURLSQLite = "jdbc:sqlite:test.sqlite";
 
 	public static final String JDBCDriverMySQL = "com.mysql.jdbc.Driver";
 	public static final String JDBCURLMySQL = "jdbc:mysql://localhost:3306/jdbc_test?user=nicola&password=episteme";
