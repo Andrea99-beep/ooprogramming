@@ -1,4 +1,3 @@
-
 # Object Oriented Programming (DIEF, UNIMORE)
 This is an intermediate programming course about the Object Oriented methodology and Java. We recommend this course to learners who have previous experience in software development or a background in computer science.  At the end of this course, learners will be empowered to create a real-world Java program. In achieving this goal, students will learn the fundamentals of Object Oriented Programming, how to leverage the power of existing libraries, how to build graphical user interfaces, how to use some core algorithms for searching and sorting data and how to read and write data both locally and from the network.
 
