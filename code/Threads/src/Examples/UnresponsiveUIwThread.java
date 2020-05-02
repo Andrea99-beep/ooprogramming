@@ -12,7 +12,7 @@ import javax.swing.JTextField;
 
 public class UnresponsiveUIwThread extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
-	private boolean stop = false;
+	private boolean running = false;
 	private int countValue = 1;
 
 	private JTextField tfCount;
@@ -44,29 +44,36 @@ public class UnresponsiveUIwThread extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnStop) {
-			stop = true;
+			running = true;
 		} else if (e.getSource() == btnStart) {
-			stop = false;
+			running = false;
 
+			/*
+			 * Use a separate thread for executing the updateCounter() method
+			 */
 			Thread t = new Thread() {
 				@Override
-				public void run() {   // override the run(), to specify the running behaviors
-					for (int i = 0; i < 1000000; i++) {
-						if (stop) break;
-						tfCount.setText(new Integer(countValue).toString());
-						countValue++;
-					}
+				public void run() {
+					updateCounter();
 				}
 			};
 			t.start();   
 
-//			for (int i = 0; i < 100000; i++) {
-//				if (stop)
-//					break;
-//				tfCount.setText(Integer.toString(countValue));
-//				countValue++;
-//			}
+			/*
+			 * Execute the updateCounter() method in main thread.
+			 * The alternative above (execution inside thread must be commented)
+			 */
+			//updateCounter();
 		}
+	}
+	
+	void updateCounter() {
+		for (int i = 0; i < 1000000; i++) {
+			if (running) break;
+			tfCount.setText(Integer.valueOf(countValue).toString());
+			countValue++;
+		}
+		
 	}
 
 	public static void main(String[] args) {

@@ -43,7 +43,6 @@ public class ShopWrong<T> implements Iterable<T> {
 		ShopWrong<Product> ps = new ShopWrong<Product>();
 
 		List<Fruit> lf;
-		List<Product> lp;
 
 		// CASE1: Single type (Single Object)
 		System.out.println("CASE1: Single type (Single Object)");
@@ -71,8 +70,7 @@ public class ShopWrong<T> implements Iterable<T> {
 		// compile error if uncommented
 		// ps.buy(lf);
 
-		lp = new ArrayList<Product>();
 		// compile error if uncommented
-		// fs.sell(lp, 3);
+		// fs.sell(new ArrayList<Product>(), 3);
 	}
 }

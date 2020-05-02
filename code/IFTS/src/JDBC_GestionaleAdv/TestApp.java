@@ -16,7 +16,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-public class App extends JFrame implements ActionListener {
+public class TestApp extends JFrame implements ActionListener {
+	private static final long serialVersionUID = 1L;
 	List<Utente> utenti;
 	int currentSelection;
 
@@ -28,7 +29,7 @@ public class App extends JFrame implements ActionListener {
 	JButton btnPrev;
 	JButton btnNext;
 
-	public App(List<Utente> utenti) {
+	public TestApp(List<Utente> utenti) {
 		this.utenti = utenti;
 		this.currentSelection = 0;
 
@@ -151,6 +152,6 @@ public class App extends JFrame implements ActionListener {
 			db.close();
 		}
 
-		App app = new App(utenti);
+		new TestApp(utenti);
 	}
 }

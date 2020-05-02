@@ -8,6 +8,8 @@ public class MyException extends Exception {
 	 * Source Menu->Generate Constructors from Superclass...
 	 */
 
+	private static final long serialVersionUID = 1L;
+
 	public MyException() {
 		super();
 	}
