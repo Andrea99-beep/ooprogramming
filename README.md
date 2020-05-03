@@ -6,13 +6,19 @@ This is an intermediate programming course about the Object Oriented methodology
 * [Eclipse IDE for Java developers](https://www.eclipse.org/downloads/)
 * [Git distributed version control system ](https://git-scm.com/downloads)
 
-## Web
+## Web Tutorials 
 * https://docs.oracle.com/javase/tutorial/
+* http://tutorials.jenkov.com/
 * https://www.w3resource.com/java-tutorial/
-* https://www.w3resource.com/java-exercises/
 * https://github.com/mtdvio/every-programmer-should-know
 * https://github.com/charlax/professional-programming
 * https://github.com/sindresorhus/awesome
+
+## Web Exercises
+* https://www.w3resource.com/java-exercises/
+* https://www.leveluplunch.com/java/exercises/
+* https://exercism.io/tracks/java
+* https://github.com/exercism/java
 
 ## Books
 * Programmazione a oggetti in Java; Giacomo Cabri, Franco Zambonelli (beginner)
@@ -20,7 +26,7 @@ This is an intermediate programming course about the Object Oriented methodology
 * Effective Java; Joshua Bloch (advanced)
 * Design Patterns; Eric and Elisabeth Freeman (advanced)
 
-## Video
+## Videos
 * [Youtube](https://www.youtube.com/watch?v=JxspJSfVvSA&list=PLhlcRDRHVUzTruZmXalUSJAK26pouP8ST)
 
 ## Slides, code examples
