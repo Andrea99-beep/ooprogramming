@@ -21,7 +21,6 @@ class Consumer extends AbstractObservable implements Runnable {
 			try {
 				Thread.sleep(wait);
 			} catch (InterruptedException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 
