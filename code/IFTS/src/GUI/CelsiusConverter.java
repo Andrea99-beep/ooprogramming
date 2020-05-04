@@ -15,34 +15,46 @@ public class CelsiusConverter extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	JTextField tfCelsius;
 	JTextField tfFahrneit;
-	JButton btConvert;
+	JButton btCF;
+	JButton btFC;
 
 	public CelsiusConverter() throws HeadlessException {
 		super("Celsius Converter");
 
-		tfCelsius = new JTextField("0000");
-		tfFahrneit = new JTextField("0032");
-		btConvert = new JButton("Convert!");
-		btConvert.addActionListener(this);
+		tfCelsius = new JTextField("0.0");
+		tfFahrneit = new JTextField("32.0");
+		btCF = new JButton("C->F");
+		btCF.addActionListener(this);
+		btFC = new JButton("F->C");
+		btFC.addActionListener(this);
 
-		JPanel p1 = new JPanel(new GridLayout(1, 5));
+		JPanel p1 = new JPanel(new GridLayout(1, 6));
 		p1.add(tfCelsius);
 		p1.add(new JLabel("°C"));
 		p1.add(tfFahrneit);
 		p1.add(new JLabel("°F"));
-		p1.add(btConvert);
+		p1.add(btCF);
+		p1.add(btFC);
 
 		setContentPane(p1);
-		setSize(300, 75);
+		setSize(400, 75);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		double tc = Double.parseDouble(tfCelsius.getText());
-		double tf = (tc * 1.8) + 32;
-		tfFahrneit.setText(String.format("%f", tf));
+		if (e.getSource() == btCF) {
+			double tc = Double.parseDouble(tfCelsius.getText());
+			double tf = (tc * 1.8) + 32;
+			tfFahrneit.setText(String.format("%.1f", tf));
+		}
+
+		if (e.getSource() == btFC) {
+			double tf = Double.parseDouble(tfFahrneit.getText());
+			double tc = (tf - 32) / 1.8;
+			tfCelsius.setText(String.format("%.1f", tc));
+		}
 	}
 
 	public static void main(String[] args) {
