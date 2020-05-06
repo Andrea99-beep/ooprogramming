@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -23,7 +22,8 @@ public class GamePanel extends JPanel {
 		this.xLock = 0;
 		this.yLock = 0;
 		try {
-			this.image = ImageIO.read(new File(path));
+			System.out.println(getClass().getResource(path));
+			this.image = ImageIO.read(getClass().getResource(path));
 			this.rLock = image.getWidth();
 			if (image.getWidth() != image.getHeight()) {
 				throw new IllegalArgumentException();

@@ -16,6 +16,7 @@ public class ConsumerSynchcronizedWaitNotify<T> extends Consumer<T> {
 					q.poll();
 					System.out.printf("Consumer %s received %d items\n", Thread.currentThread().getName(), count);
 					count += 1;
+					q.notifyAll();
 				} else {
 					try {
 						q.wait();

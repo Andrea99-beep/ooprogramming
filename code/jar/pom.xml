@@ -13,13 +13,22 @@
 	</properties>
 
 	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+				<includes>
+					<include>**/*</include>
+				</includes>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>1.6.0</version>
 				<configuration>
-					<mainClass>org.nbicocchi.movingsprite.TestApp</mainClass>
+					<mainClass>org.nbicocchi.swing.movingsprite.TestApp</mainClass>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -31,7 +40,7 @@
 					</descriptorRefs>
 					<archive>
 						<manifest>
-							<mainClass>org.nbicocchi.movingsprite.TestApp</mainClass>
+							<mainClass>org.nbicocchi.swing.movingsprite.TestApp</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

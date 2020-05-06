@@ -30,7 +30,7 @@ public class MovingSprite extends JFrame implements KeyListener, ActionListener 
 		super("Moving Sprite");
 
 		// Set up a panel for the game itself
-		p = new GamePanel(new Dimension(400, 400), "src/main/resources/lock.jpg");
+		p = new GamePanel(new Dimension(400, 400), "/lock.jpg");
 
 		// Set up a panel for the buttons
 		JPanel btnPanel = new JPanel(new FlowLayout());
